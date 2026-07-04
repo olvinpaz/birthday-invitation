@@ -1,0 +1,45 @@
+:root {
+    /* Paleta pastel */
+    --color-pink: #FFD1DC;
+    --color-blue: #AEC6CF;
+    --color-yellow: #FDFD96;
+    --color-lavender: #C3B1E1;
+    --color-light-gray: #F5F5F5;
+    --color-white: #FFFFFF;
+
+    /* Colores extra para textos / acentos */
+    --color-text-dark: #5c5c5c;
+    --color-text-light: #888888;
+    --color-primary-button: #C3B1E1;
+    --color-secondary-button: #FFD1DC;
+
+    /* Fuentes */
+    --font-main: 'Outfit', sans-serif;
+    --font-script: 'Pacifico', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-light-gray);
+    color: var(--color-text-dark);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Ocultar elementos auxiliares */
+.hidden {
+    display: none !important;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Utils para prevenir reflow: usar will-change cuando se anime intensamente */
+.will-animate {
+    will-change: transform, opacity;
+}

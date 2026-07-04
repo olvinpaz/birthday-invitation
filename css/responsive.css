@@ -1,0 +1,71 @@
+/* Dispositivos muy pequeños */
+@media screen and (max-width: 360px) {
+    .typewriter {
+        font-size: 1.8rem;
+    }
+
+    .typewriter-sub {
+        font-size: 1.2rem;
+    }
+
+    .title-main {
+        font-size: 2rem;
+    }
+
+    .name-main {
+        font-size: 1.5rem;
+    }
+
+    .image-wrapper {
+        height: 250px;
+    }
+
+    .cd-box span {
+        font-size: 1.3rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
+
+/* Dispositivos estándar (390x844, 393x852) */
+@media screen and (min-width: 361px) and (max-width: 400px) {
+    .typewriter {
+        font-size: 2rem;
+    }
+
+    .title-main {
+        font-size: 2.2rem;
+    }
+
+    .name-main {
+        font-size: 1.8rem;
+    }
+
+    .image-wrapper {
+        height: 280px;
+    }
+
+    .cd-box span {
+        font-size: 1.5rem;
+    }
+}
+
+/* Dispositivos grandes (412x915, 430x932) */
+@media screen and (min-width: 401px) and (max-width: 500px) {
+    .image-wrapper {
+        height: 320px;
+    }
+}
+
+/* Accesibilidad: Reducir animaciones si el usuario lo prefiere */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

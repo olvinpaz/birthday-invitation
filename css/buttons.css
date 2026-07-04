@@ -1,0 +1,84 @@
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 50px;
+    border: none;
+    font-family: var(--font-main);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn-primary {
+    background-color: var(--color-primary-button);
+    color: var(--color-white);
+    box-shadow: 0 5px 15px rgba(195, 177, 225, 0.5);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 8px 25px rgba(195, 177, 225, 0.7);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--color-secondary-button);
+    color: var(--color-text-dark);
+    box-shadow: 0 5px 15px rgba(255, 209, 220, 0.5);
+}
+
+.btn-secondary:hover {
+    box-shadow: 0 8px 25px rgba(255, 209, 220, 0.7);
+    transform: translateY(-2px);
+}
+
+/* Botón de Música Flotante */
+.music-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    border: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    color: var(--color-blue);
+    transition: transform 0.3s ease;
+}
+
+.music-btn:hover {
+    transform: scale(1.1);
+}
+
+.music-btn.playing {
+    animation: pulseMusic 2s infinite;
+}
+
+@keyframes pulseMusic {
+    0% { box-shadow: 0 0 0 0 rgba(174, 198, 207, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(174, 198, 207, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(174, 198, 207, 0); }
+}

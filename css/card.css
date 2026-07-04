@@ -1,0 +1,187 @@
+.main-card-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: url('../assets/images/Nube_y_arcoíris_pastel_kawaii.jpg') center/cover no-repeat fixed;
+    background-color: var(--color-pink);
+    /* Fallback */
+}
+
+/* Capa semitransparente sobre el background para que el contenido se lea bien */
+.main-card-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background: rgba(255, 255, 255, 0.6); */
+    /* backdrop-filter: blur(5px); */
+    z-index: 0;
+}
+
+#confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 50;
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+    /* background: var(--color-white); */
+    max-width: 500px;
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.invitation-details {
+    padding: 30px;
+    text-align: center;
+    padding-top: 0px;
+}
+
+.title-main {
+    font-family: var(--font-script);
+    color: var(--color-lavender);
+    color: rgb(243, 136, 172);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.name-main {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin-bottom: 15px;
+    line-height: 1.2;
+
+    color: #a87be2;
+    text-shadow: 0 0 0px #a87be2, 0 0 10px #a87be2;
+
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.info-item,
+.location-box {
+    background: var(--color-light-gray);
+    background-color: #fff;
+    box-shadow: 0 7px 7px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.location-box {
+    margin-bottom: 30px;
+    padding: 15px 0px;
+}
+
+.label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.cd-box {
+    flex: 1;
+    background: var(--color-blue);
+    color: var(--color-white);
+    padding: 10px 5px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(174, 198, 207, 0.4);
+    font-size: 0.5rem;
+}
+
+.cd-box span {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.cd-box small {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+}
+
+.gift-card {
+    background: rgba(255, 209, 220, 0.5);
+    background: rgba(255, 255, 255, 0.9);
+    /* Rosa claro */
+    border: 1px solid var(--color-pink);
+    padding: 20px;
+
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+.gift-icon {
+    color: var(--color-pink);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.gift-message {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--color-text-dark);
+}
+
+.gift-details {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--color-text-light);
+}
