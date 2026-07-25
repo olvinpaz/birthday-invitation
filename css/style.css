@@ -1,6 +1,7 @@
 :root {
     /* Paleta pastel */
-    --color-pink: #FFD1DC;
+    --color-pink: #f4b1c1;
+    --color-pink-light: #FFD1DC;
     --color-blue: #AEC6CF;
     --color-yellow: #FDFD96;
     --color-lavender: #C3B1E1;
@@ -49,4 +50,12 @@ body {
 /* Utils para prevenir reflow: usar will-change cuando se anime intensamente */
 .will-animate {
     will-change: transform, opacity;
+}
+
+.button-primary {
+    border: 2px solid #9f76e4;
+}
+
+.button-secondary {
+    border: 2px solid #ec91a7;
 }
