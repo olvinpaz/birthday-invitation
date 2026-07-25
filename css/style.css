@@ -52,10 +52,10 @@ body {
     will-change: transform, opacity;
 }
 
-.button-primary {
-    border: 2px solid #9f76e4;
+.btn-primary {
+    border: 2px solid #9f76e4 !important;
 }
 
-.button-secondary {
-    border: 2px solid #ec91a7;
+.btn-secondary {
+    border: 2px solid #ec91a7 !important;
 }
